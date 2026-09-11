@@ -1,1 +1,2 @@
-*1.0.0.js
+*gyti.js*
+-A good tool-
