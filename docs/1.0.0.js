@@ -19,11 +19,9 @@ function AI_local_2(a){
 	.then((eeeee)=>document.getElementById("b").innerHTML=eeeee);
 }
 function AI_public(a){
-	alert("This is local AI.");
 	window.open("https://swswsw.xushi-1009.cc/public?q="+a,"_blank");
 }
 function AI_public_2(a){
-	alert("This is local AI.");
 	fetch("https://swswsw.xushi-1009.cc/public/get?key="+a)
 	.then((xu)=>xu.text())
 	.then((eeeee)=>document.getElementById("b").innerHTML=eeeee);
