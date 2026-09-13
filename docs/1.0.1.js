@@ -1,4 +1,3 @@
-let lllll="";
 function out(a){
 	alert(a);
 }
@@ -27,13 +26,11 @@ function AI_public_2(a){
 	.then((xu)=>xu.text())
 	.then((eeeee)=>document.getElementById("b").innerHTML=eeeee);
 }
-function ipt(a){
-	fetch(a)
-	.then((xu)=>xu.text())
-	.then((eeeee)=>lllll=eeeee);
+function how_to_ipt(a){
+	alert("Write this in html:<script src=\""+a+"\"><\/script>");
 }
 function run(a){
-	let b=lllll+a;
+	let b=a;
 	let c=b
 	.replaceAll("xy","let")
 	.replaceAll("fc","function")
