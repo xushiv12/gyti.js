@@ -1,0 +1,90 @@
+<title>GYTI code language</title>
+<center>
+<h1>GYTI language</h1>
+<p>Enter code here:</p>
+<textarea id="a"></textarea><br>
+<button onclick="A()">run</button><br>
+<button onclick="B()">save</button><br>
+<button onclick="C()">print</button><br>
+<button onclick="document.documentElement.requestFullscreen();">fullscreen</button><br>
+<b>Made by GYTI.</b><br>
+<iframe id="xx" style="border:0;display:none;"></iframe><br>
+<p id="b"></p>
+<script>
+document.getElementById("a").value=localStorage.getItem("xxx")||"";
+let lllll="";
+function out(a){
+	alert(a);
+}
+function put(a){
+	let b=prompt(a);
+	return b
+}
+function wt(a){
+	document.getElementById("b").innerHTML=a;
+}
+function AI_local(a,b){
+	alert("This is local AI.");
+	window.open("https://swswsw.xushi-1009.cc/local?key="+a+"&q="+b,"_blank");
+}
+function AI_local_2(a){
+	alert("This is local AI.");
+	fetch("https://swswsw.xushi-1009.cc/local/get?key="+a)
+	.then((xu)=>xu.text())
+	.then((eeeee)=>document.getElementById("b").innerHTML=eeeee);
+}
+function AI_public(a){
+	window.open("https://swswsw.xushi-1009.cc/public?q="+a,"_blank");
+}
+function AI_public_2(a){
+	fetch("https://swswsw.xushi-1009.cc/public/get?key="+a)
+	.then((xu)=>xu.text())
+	.then((eeeee)=>document.getElementById("b").innerHTML=eeeee);
+}
+function ipt(a){
+	fetch(a)
+	.then((xu)=>xu.text())
+	.then((eeeee)=>lllll=eeeee);
+}
+function A(){
+	let a=document.getElementById("a").value;
+	let b=a+lllll;
+	let c=b
+	.replaceAll("xy","let")
+	.replaceAll("fc","function")
+	.replaceAll("prt","window.print()")
+	.replaceAll("wd","window")
+	.replaceAll("op","window.open")
+	.replaceAll("wtime","setInterval")
+	.replaceAll("otime","setTimeout")
+	.replaceAll("full","document.documentElement.requestFullscreen()")
+	.replaceAll("II","if")
+	.replaceAll("EE","else")
+	.replaceAll("FF","for")
+	.replaceAll("WW","while")
+	.replaceAll("W/W","WW")
+	.replaceAll("F/F","FF")
+	.replaceAll("E/E","EE")
+	.replaceAll("I/I","II")
+	.replaceAll("f/ull","full")
+	.replaceAll("o/time","otime")
+	.replaceAll("w/time","wtime")
+	.replaceAll("o/p","op")
+	.replaceAll("x/y","xy")
+	.replaceAll("f/c","fc")
+	.replaceAll("p/rt","prt")
+	.replaceAll("w/d","wd")
+	.replaceAll("/@","/")
+	.replaceAll("@/","@");
+	eval(c);
+}
+function B(){
+	let a=document.getElementById("a").value;
+	localStorage.setItem("xxx",a);
+}
+function C(){
+	let a=document.getElementById("a").value;
+	document.getElementById("xx").srcdoc=a+`<script>window.print();<\/script>`;
+}
+</script>
+</center>
