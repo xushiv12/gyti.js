@@ -75,19 +75,17 @@ function d_python(a){
   def AI_local(a,b):
       print("This is a local AI");
       c=input("Did you install ollama and ollama lib?[Y/N]:")
-      if(c=="Y" or c=="y"){
+      if c=="Y" or c=="y":
           import ollama
           d=ollama.chat(
           model=a,
           messages=[{"role":"user","content":b}]
           )
           air=d["message"]["content"]
-      }
    def AI_public(a,b):
       c=input("Did you install ollama and ollama lib and flask?[Y/N]:")
-      if(c=="Y" or c=="y"){
+      if c=="Y" or c=="y":
           ftft="y"
-      } 
    form flask import Flask,request
    import ollama
    app=Flask(__name__)
