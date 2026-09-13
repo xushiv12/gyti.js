@@ -86,7 +86,7 @@ def AI_public(a,b):
       c=input("Did you install ollama and ollama lib and flask?[Y/N]:")
       if c=="Y" or c=="y":
           ftft="y"
-form flask import Flask,request
+from flask import Flask,request
 import ollama
 app=Flask(__name__)
 @app.route("/")
