@@ -30,7 +30,7 @@ function how_to_ipt(a){
 	alert("Write this in html:<script src=\""+a+"\"><\/script>");
 }
 function Q(a,b){
-  new QRcode(document.getElementById(a),b);
+  new QRCode(document.getElementById(a),b);
 }
 function run(a){
 	let b=a;
