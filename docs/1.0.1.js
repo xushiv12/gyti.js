@@ -33,7 +33,7 @@ function ipt(a){
 	.then((eeeee)=>lllll=eeeee);
 }
 function run(a){
-	let b=a+lllll;
+	let b=lllll+a;
 	let c=b
 	.replaceAll("xy","let")
 	.replaceAll("fc","function")
