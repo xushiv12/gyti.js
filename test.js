@@ -64,7 +64,7 @@ function run_js(a){
 	eval(c);
 }
 function d_python(a){
-	let b=a+`
+	let b=`
 air=""
 ftft=""
 def out(a):
@@ -86,6 +86,7 @@ def AI_public(a,b):
       c=input("Did you install ollama and ollama lib and flask?[Y/N]:")
       if c=="Y" or c=="y":
           ftft="y"
+`+a+`
 from flask import Flask,request
 import ollama
 app=Flask(__name__)
