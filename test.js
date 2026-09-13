@@ -64,7 +64,7 @@ function run_js(a){
 	eval(c);
 }
 function d_python(a){
-	let b=`
+	let b=a+`
 air=""
 ftft=""
 def out(a):
@@ -98,7 +98,7 @@ def A():
       ftft=d["message"]["content"]
       return ftft
 app.run(host="0.0.0.0",port=18970)
-  `+a;
+  `;
 	let c=b
 	.replaceAll("fc","def")
 	.replaceAll("II","if")
