@@ -65,14 +65,14 @@ function run_js(a){
 }
 function d_python(a){
 	let b=`
-  air=""
-  ftft=""
-  def out(a):
+air=""
+ftft=""
+def out(a):
       print(a)
-  def put(a):
+def put(a):
       b=input(a)
       return b
-  def AI_local(a,b):
+def AI_local(a,b):
       print("This is a local AI");
       c=input("Did you install ollama and ollama lib?[Y/N]:")
       if c=="Y" or c=="y":
@@ -82,15 +82,15 @@ function d_python(a){
           messages=[{"role":"user","content":b}]
           )
           air=d["message"]["content"]
-   def AI_public(a,b):
+def AI_public(a,b):
       c=input("Did you install ollama and ollama lib and flask?[Y/N]:")
       if c=="Y" or c=="y":
           ftft="y"
-   form flask import Flask,request
-   import ollama
-   app=Flask(__name__)
-   @app.route("/")
-   def A():
+form flask import Flask,request
+import ollama
+app=Flask(__name__)
+@app.route("/")
+def A():
       d=ollama.chat(
       model=request.args.get("m"),
       messages=[{"role":"user","content":request.args.get("q")}]
