@@ -32,7 +32,7 @@ function how_to_ipt(a){
 function Q(a,b){
   new QRCode(document.getElementById(a),b);
 }
-function M(a,b){
+function M(){
   new google.maps.Map( document.getElementById("map"), { center: { lat: 37.7749, lng: -122.4194 }, zoom: 12 } );
 }
 function run_js(a){
