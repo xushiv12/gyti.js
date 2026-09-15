@@ -35,105 +35,6 @@ function Q(a,b){
 function M(){
   new google.maps.Map( document.getElementById("map"), { center: { lat: 37.7749, lng: -122.4194 }, zoom: 12 } );
 }
-function run_js(a){
-	let b=a;
-	let c=b
-	.replaceAll("xy","let")
-	.replaceAll("fc","function")
-	.replaceAll("prt","window.print()")
-	.replaceAll("wd","window")
-	.replaceAll("op","window.open")
-	.replaceAll("wtime","setInterval")
-	.replaceAll("otime","setTimeout")
-	.replaceAll("full","document.documentElement.requestFullscreen()")
-	.replaceAll("II","if")
-	.replaceAll("EE","else")
-	.replaceAll("FF","for")
-	.replaceAll("WW","while")
-	.replaceAll("W/W","WW")
-	.replaceAll("F/F","FF")
-	.replaceAll("E/E","EE")
-	.replaceAll("I/I","II")
-	.replaceAll("f/ull","full")
-	.replaceAll("o/time","otime")
-	.replaceAll("w/time","wtime")
-	.replaceAll("o/p","op")
-	.replaceAll("x/y","xy")
-	.replaceAll("f/c","fc")
-	.replaceAll("p/rt","prt")
-	.replaceAll("w/d","wd")
-	.replaceAll("/@","/")
-	.replaceAll("@/","@");
-	eval(c);
-}
-function d_python(a){
-	let b=`
-air=""
-ftft=""
-def out(a):
-      print(a)
-def put(a):
-      b=input(a)
-      return b
-def AI_local(a,b):
-      global ftft
-      print("This is a local AI");
-      c=input("Did you install ollama and ollama lib?[Y/N]:")
-      if c=="Y" or c=="y":
-          import ollama
-          d=ollama.chat(
-          model=a,
-          messages=[{"role":"user","content":b}]
-          )
-          air=d["message"]["content"]
-def AI_public(a,b):
-      global ftft
-      c=input("Did you install ollama and ollama lib and flask?[Y/N]:")
-      if c=="Y" or c=="y":
-          ftft="y"
-`+a+`
-from flask import Flask,request
-import ollama
-app=Flask(__name__)
-@app.route("/")
-def A():
-      global ftft
-      d=ollama.chat(
-      model=request.args.get("m"),
-      messages=[{"role":"user","content":request.args.get("q")}]
-      )
-      ftft=d["message"]["content"]
-      return ftft
-app.run(host="0.0.0.0",port=18970)
-  `;
-	let c=b
-	.replaceAll("fc","def")
-	.replaceAll("II","if")
-	.replaceAll("EE","else")
-	.replaceAll("FF","for")
-	.replaceAll("WW","while")
-	.replaceAll("W/W","WW")
-	.replaceAll("F/F","FF")
-	.replaceAll("E/E","EE")
-	.replaceAll("I/I","II")
-	.replaceAll("f/c","fc")
-	.replaceAll("/@","/")
-	.replaceAll("@/","@");
-	const content = c;
-
-  const blob = new Blob([content], {
-    type: "text/plain;charset=utf-8"
-  });
-
-  const url = URL.createObjectURL(blob);
-
-  const xxx = document.createElement("a");
-  xxx.href = url;
-  xxx.download = "1.py";
-  xxx.click();
-
-  URL.revokeObjectURL(url);
-}
 const canvas=document.getElementById("canvas");
 const ctx=canvas.getContext("2d");
 function resize(){
@@ -293,4 +194,103 @@ function loop(){
 function particle(){
     makeParticles();
     loop();
+}
+function run_js(a){
+	let b=a;
+	let c=b
+	.replaceAll("xy","let")
+	.replaceAll("fc","function")
+	.replaceAll("prt","window.print()")
+	.replaceAll("wd","window")
+	.replaceAll("op","window.open")
+	.replaceAll("wtime","setInterval")
+	.replaceAll("otime","setTimeout")
+	.replaceAll("full","document.documentElement.requestFullscreen()")
+	.replaceAll("II","if")
+	.replaceAll("EE","else")
+	.replaceAll("FF","for")
+	.replaceAll("WW","while")
+	.replaceAll("W/W","WW")
+	.replaceAll("F/F","FF")
+	.replaceAll("E/E","EE")
+	.replaceAll("I/I","II")
+	.replaceAll("f/ull","full")
+	.replaceAll("o/time","otime")
+	.replaceAll("w/time","wtime")
+	.replaceAll("o/p","op")
+	.replaceAll("x/y","xy")
+	.replaceAll("f/c","fc")
+	.replaceAll("p/rt","prt")
+	.replaceAll("w/d","wd")
+	.replaceAll("/@","/")
+	.replaceAll("@/","@");
+	eval(c);
+}
+function d_python(a){
+	let b=`
+air=""
+ftft=""
+def out(a):
+      print(a)
+def put(a):
+      b=input(a)
+      return b
+def AI_local(a,b):
+      global ftft
+      print("This is a local AI");
+      c=input("Did you install ollama and ollama lib?[Y/N]:")
+      if c=="Y" or c=="y":
+          import ollama
+          d=ollama.chat(
+          model=a,
+          messages=[{"role":"user","content":b}]
+          )
+          air=d["message"]["content"]
+def AI_public(a,b):
+      global ftft
+      c=input("Did you install ollama and ollama lib and flask?[Y/N]:")
+      if c=="Y" or c=="y":
+          ftft="y"
+`+a+`
+from flask import Flask,request
+import ollama
+app=Flask(__name__)
+@app.route("/")
+def A():
+      global ftft
+      d=ollama.chat(
+      model=request.args.get("m"),
+      messages=[{"role":"user","content":request.args.get("q")}]
+      )
+      ftft=d["message"]["content"]
+      return ftft
+app.run(host="0.0.0.0",port=18970)
+  `;
+	let c=b
+	.replaceAll("fc","def")
+	.replaceAll("II","if")
+	.replaceAll("EE","else")
+	.replaceAll("FF","for")
+	.replaceAll("WW","while")
+	.replaceAll("W/W","WW")
+	.replaceAll("F/F","FF")
+	.replaceAll("E/E","EE")
+	.replaceAll("I/I","II")
+	.replaceAll("f/c","fc")
+	.replaceAll("/@","/")
+	.replaceAll("@/","@");
+	const content = c;
+
+  const blob = new Blob([content], {
+    type: "text/plain;charset=utf-8"
+  });
+
+  const url = URL.createObjectURL(blob);
+
+  const xxx = document.createElement("a");
+  xxx.href = url;
+  xxx.download = "1.py";
+  xxx.click();
+
+  URL.revokeObjectURL(url);
 }
